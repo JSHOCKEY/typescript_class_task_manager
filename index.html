@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Task Manager</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="bg-gray-100 text-gray-800 min-h-screen p-6">
-  <div id="app"></div>
+  <div class="max-w-xl mx-auto bg-white shadow-lg rounded-xl p-6">
+    <h1 class="text-2xl font-bold mb-4 text-center">Task Manager</h1>
+
+    <form id="taskForm" class="flex flex-col gap-3 mb-6">
+      <input type="text" id="title" placeholder="Title" required class="border rounded px-3 py-2" />
+      <input type="date" id="dueDate" required class="border rounded px-3 py-2" />
+      <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Add Task</button>
+    </form>
+
+    <div id="filters" class="flex justify-center gap-2 mb-4">
+      <button type="button" data-filter="all"
+        class="filter-btn bg-gray-200 px-3 py-1 rounded hover:bg-gray-300">All</button>
+      <button type="button" data-filter="pending"
+        class="filter-btn bg-gray-200 px-3 py-1 rounded hover:bg-gray-300">Pending</button>
+      <button type="button" data-filter="completed"
+        class="filter-btn bg-gray-200 px-3 py-1 rounded hover:bg-gray-300">Completed</button>
+    </div>
+
+    <ul id="taskList" class="space-y-2"></ul>
+  </div>
+
   <script src="./dist/main.js"></script>
 </body>
+
 </html>
