@@ -1,1 +1,3 @@
-# typescript_class_task_manager
+# Task Manager
+
+This project is built using TypeScript with JavaScript classes and TailwindCSS
